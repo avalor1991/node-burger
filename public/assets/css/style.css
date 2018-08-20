@@ -1,0 +1,19 @@
+body{
+  background-color: #ffc107 !important;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+/* .change-devoured {
+  margin-bottom: 32px !important; 
+} */

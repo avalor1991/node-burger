@@ -1,0 +1,46 @@
+  <div class="row mr-0">
+    <div class="col-md-12 text-center" >
+    <img src="./assets/img/burgers.png" class="center" alt="burger">
+    <h1>Eat-Da-Burger!</h1>
+    <hr/>
+  </div>
+  <div class="col-md-6 text-center" class="task">
+			<div class="row">
+			  {{#each burgers}}
+			  	{{#unless this.devoured}}
+				<div class="col-md-8 text-center mt-3">
+					<input class="form-control mt-3" type="text" placeholder="{{this.id}}. {{this.burger_name}}" readonly>
+				</div>
+				<div class="col-md-4 text-center">
+					<form class="devour-form button-size">
+						<input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
+						<button type="submit" class="change-devoured btn btn-default btn-danger mt-2" data-id="{{id}}">Devour It</button>
+					</form>
+				</div>
+				{{/unless}}
+			  {{/each}}
+			</div>
+		</div>
+		<div class="col-md-6 text-center" class="task">
+			  {{#each burgers}}
+			  	{{#if this.devoured}}
+			  		<input class="form-control mt-3 eaten" type="text" placeholder="{{this.id}}. {{this.burger_name}}" readonly>
+				{{/if}}
+			  {{/each}}
+		</div>
+	</div>
+
+<div class="container">
+	<div class="row">
+    <div class="col-md-4 text-center enter_section"></div>
+		<div class="col-md-4 text-center enter_section">
+			<form class = "form-group">
+				<input type="text" class="form-control menu my-3" name="burger_name" value="" id="enter_text">
+				<button type="submit" class="btn btn-info" id="text-enter-button">Submit</button>
+			</form>
+			<p>Enter a burger to eat. Then click "Submit."</p>
+		</div>
+    		<div class="col-md-4 text-center enter_section"></div>
+
+	</div>
+</div>
